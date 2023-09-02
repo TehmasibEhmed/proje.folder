@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/image/—Pngtree—ancient books_994434.png"
+    />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/signstyle.css" />
+    <script defer src="assets/js/main.js"></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="logo">
+          <img src="assets/image/—Pngtree—ancient books_994434.png" />
+        </div>
+        <ul class="ul1">
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="thebook.html">
+              <div class="row">
+                <div>The</div>
+                <div class="row-2">Book</div>
+              </div>
+            </a>
+          </li>
+          <li><a href="author.html">Authors</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="block"><a class="block6" href="#">Sign In </a></li>
+        </ul>
+      </header>
+      <h1>
+        <div class="top">Book</div>
+        <div class="bottom">Store</div>
+      </h1>
+      <section>
+        <div class="divv" id="focus"></div>
+        <div class="div">
+          <div class="left">
+            <label for="login" style="margin-bottom: 28px">Login:</label>
+            <label for="password">Password:</label>
+          </div>
+          <div class="right">
+            <input type="text" id="login" style="margin-bottom: 30px" />
+            <input type="password" id="password" />
+          </div>
+        </div>
+      </section>
+      <footer>
+        <p class="tr">&copy;Projected by Tahmasib Ahmad 2023</p>
+      </footer>
+      <script>
+        const login = document.getElementById("login");
+        const password = document.getElementById("password");
+        const div = document.getElementById("focus");
+        login.addEventListener("focus", () => {
+          div.classList.add("focus");
+        });
+        password.addEventListener("focus", () => {
+          div.classList.add("focus");
+        });
+      </script>
+    </main>
+  </body>
+</html>

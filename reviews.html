@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background: url('../image/books.jpg') no-repeat center center fixed;
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        .review-card {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .review-card h4 {
+            margin-bottom: 10px;
+        }
+
+        .review-card p {
+            margin-bottom: 20px;
+        }
+
+        .review-card .reviewer {
+            font-style: italic;
+        }
+
+        .review-card .rating {
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Customer Reviews</h2>
+
+        <div id="reviewContainer"></div>
+    </div>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        const reviews = [
+            {
+                title: "Great book!",
+                content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rutrum augue et magna lobortis, sit amet interdum turpis euismod.",
+                reviewer: "John Doe",
+                rating: "4.5 stars"
+            },
+            {
+                title: "Highly recommended!",
+                content: "Etiam volutpat, libero nec commodo interdum, nunc felis interdum mi, id tristique turpis orci eget nulla.",
+                reviewer: "Jane Smith",
+                rating: "5 stars"
+            },
+            {
+                title: "Enjoyed every page!",
+                content: "Aliquam erat volutpat. Curabitur in ex eu felis pulvinar aliquam. Phasellus eleifend risus non magna fringilla interdum.",
+                reviewer: "David Johnson",
+                rating: "4 stars"
+            }
+        ];
+
+        const reviewContainer = document.getElementById("reviewContainer");
+
+        reviews.forEach(review => {
+            const reviewCard = document.createElement("div");
+            reviewCard.classList.add("review-card");
+
+            const title = document.createElement("h4");
+            title.textContent = review.title;
+
+            const content = document.createElement("p");
+            content.textContent = review.content;
+
+            const reviewer = document.createElement("p");
+            reviewer.classList.add("reviewer");
+            reviewer.textContent = `- ${review.reviewer}`;
+
+            const rating = document.createElement("p");
+            rating.classList.add("rating");
+            rating.textContent = `Rating: ${review.rating}`;
+
+            reviewCard.appendChild(title);
+            reviewCard.appendChild(content);
+            reviewCard.appendChild(reviewer);
+            reviewCard.appendChild(rating);
+
+            reviewContainer.appendChild(reviewCard);
+        });
+    </script>
+</body>
+</html>
